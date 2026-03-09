@@ -77,6 +77,16 @@ The project prioritizes **performance and clean architecture** over simply imple
                 │     Supabase DB     │
                 │    PostgreSQL       │
                 └─────────────────────┘
+Final System Architecture
+React Frontend
+   │
+   │ REST API
+   ▼
+Node.js + Express
+   │
+   │ Supabase Client
+   ▼
+Supabase PostgreSQL
 ```
 
 ### Architectural Principles
