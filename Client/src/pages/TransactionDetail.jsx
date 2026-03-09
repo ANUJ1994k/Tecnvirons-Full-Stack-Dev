@@ -1,7 +1,7 @@
 import React, { useRef, useCallback } from 'react';
-import ProductCard from '../components/ProductCard';
-import Loader from '../components/Loader';
-import useProducts from '../hooks/useProducts';
+import ProductCard from '../components/TransactionRow';
+import Loader from '../components/TransactionTable';
+import useProducts from '../hooks/useTransactions';
 
 export default function ProductList() {
   const { products, setPage, loading, hasMore } = useProducts();

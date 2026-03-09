@@ -1,18 +1,14 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-const ProductList = lazy(() => import('./pages/ProductList'));
-const ProductDetail = lazy(() => import('./pages/ProductDetail'));
-import Loader from './components/Loader';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 
-export default function App() {
+function App() {
   return (
-    <Router>
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<ProductList />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-        </Routes>
-      </Suspense>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
